@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Support for its syntax
+gem 'rspec-its', '~> 1.0.1'
+# Support for stubbing model in view specs:
+gem 'rspec-activemodel-mocks', '~> 1.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -31,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rspec-rails', '~> 3.0.0'
+gem 'rspec-expectations', '~> 3.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,12 +47,10 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'capybara', '~> 2.1.0'
+  gem 'capybara', '~> 2.3.0'
   gem 'shoulda-matchers', '~> 2.8.0'
 end
 
