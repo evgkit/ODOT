@@ -18,6 +18,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.include TodoListHelpers, type: :feature
+
   config.expose_current_running_example_as :example
   config.raise_errors_for_deprecations!
 
