@@ -2438,3 +2438,117 @@ AbstractController::ActionNotFound (The action 'edit' could not be found for Pas
   Rendered /home/e/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
   Rendered /home/e/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
   Rendered /home/e/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (69.2ms)
+
+
+Started GET "/password_resets/tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3/edit" for 127.0.0.1 at 2015-05-24 19:46:15 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"id"=>"tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."password_reset_token" = ? LIMIT 1[0m  [["password_reset_token", "tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"]]
+  Rendered password_resets/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 63.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/scaffolds.self-3596dd4389d2003344e4ccb44f5cd26a5077bc64fc3f75c8280c42859371a221.css?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/todo_items.self-6009e41a073372a95dd71a8d2490fdf1c397bf0a249a062592cc4c2edcb2a132.css?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/application.self-59bb9896f50b8aed7c777c732da1a59ddb15b7a411c49d9faca0034603318bcf.css?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/todo_lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/todo_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-05-24 19:46:16 +0300
+
+
+Started GET "/password_resets/tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3/edit" for 127.0.0.1 at 2015-05-24 19:52:29 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"id"=>"tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."password_reset_token" = ? LIMIT 1  [["password_reset_token", "tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"]]
+  Rendered password_resets/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-3596dd4389d2003344e4ccb44f5cd26a5077bc64fc3f75c8280c42859371a221.css?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/todo_items.self-6009e41a073372a95dd71a8d2490fdf1c397bf0a249a062592cc4c2edcb2a132.css?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/todo_lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/application.self-59bb9896f50b8aed7c777c732da1a59ddb15b7a411c49d9faca0034603318bcf.css?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/todo_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-05-24 19:52:30 +0300
+
+
+Started GET "/password_resets/tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3/edit" for 127.0.0.1 at 2015-05-24 19:53:48 +0300
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"id"=>"tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."password_reset_token" = ? LIMIT 1[0m  [["password_reset_token", "tEiWk_ZpUxb7cZ2ySJ6IZq4p7mQJiNrpINhzpWiqf9sDQMmBc0PSIM8AokB_XUs3"]]
+  Rendered password_resets/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 94ms (Views: 72.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.self-3596dd4389d2003344e4ccb44f5cd26a5077bc64fc3f75c8280c42859371a221.css?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/todo_lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/todo_items.self-6009e41a073372a95dd71a8d2490fdf1c397bf0a249a062592cc4c2edcb2a132.css?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/application.self-59bb9896f50b8aed7c777c732da1a59ddb15b7a411c49d9faca0034603318bcf.css?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/todo_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-05-24 19:53:49 +0300

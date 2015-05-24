@@ -1,0 +1,14 @@
+<h1>Change your password</h1>
+
+<%= form_for @user, url: password_resets_path(@user.password_reset_token), html: { method: :path } do |form| %>
+
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    <br>
+
+    <%= form.label :password_confirmation, "Password (again)" %>
+    <%= form.password_field :password_confirmation %>
+    <br>
+
+    <%= submit_tag "Change Password" %>
+<% end %>
