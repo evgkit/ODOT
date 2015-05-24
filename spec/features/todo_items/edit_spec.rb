@@ -4,6 +4,9 @@ describe "Editing todo items" do
   let!(:todo_list) { TodoList.create(title: "Grocery list", description: "Groceries") }
   let!(:todo_item) { todo_list.todo_items.create(content: "Milk") }
 
+  let(:user) { create(:user) }
+  before { sign_in user, password: "rocket" }
+
   it "is successful with valid content" do
     visit_todo_list(todo_list)
     within "#todo_item_#{todo_item.id}" do

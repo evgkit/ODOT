@@ -25,7 +25,8 @@ RSpec.configure do |config|
   config.raise_errors_for_deprecations!
 
   config.include FactoryGirl::Syntax::Methods
-  config.include AuthenticationHelper, type: :controller
+  config.include AuthenticationHelper::Controller, type: :controller
+  config.include AuthenticationHelper::Feature, type: :feature
 
   # ## Mock Framework
   #
