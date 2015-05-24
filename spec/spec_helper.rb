@@ -24,6 +24,9 @@ RSpec.configure do |config|
   config.expose_current_running_example_as :example
   config.raise_errors_for_deprecations!
 
+  config.include FactoryGirl::Syntax::Methods
+  config.include AuthenticationHelper, type: :controller
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
