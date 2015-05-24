@@ -69,4 +69,51 @@ RSpec.describe PasswordResetsController, type: :controller do
     end
   end
 
+  describe "PATCH update" do
+    context "with no token found" do
+      it "renders the edit page" do
+        patch :update, id: 'notfound', user: { password: 'new123', password_confirmation: 'new123' }
+        expect(response).to render_template('edit')
+      end
+
+      it "sets the flash message" do
+        patch :update, id: 'notfound', user: { password: 'new123', password_confirmation: 'new123' }
+        expect(flash[:notice]).to match(/not found/)
+      end
+    end
+
+    context "with a valid token" do
+      let(:user) { create(:user) }
+      before { user.generate_password_reset_token! }
+
+      it "updates the user's password" do
+        expect {
+          patch :update, id: user.password_reset_token, user: { password: 'new1234', password_confirmation: 'new1234' }
+          user.reload
+        }.to change(user, :password_digest)
+      end
+
+      it "clears the password_reset_token" do
+        patch :update, id: user.password_reset_token, user: { password: 'new1234', password_confirmation: 'new1234' }
+        user.reload
+        expect(user.password_reset_token).to be_blank
+      end
+
+      it "sets the session[:user_id] to the user's id" do
+        patch :update, id: user.password_reset_token, user: { password: 'new1234', password_confirmation: 'new1234' }
+        expect(session[:user_id]).to eq(user.id)
+      end
+
+      it "sets the flash[:success] message" do
+        patch :update, id: user.password_reset_token, user: { password: 'new1234', password_confirmation: 'new1234' }
+        expect(flash[:success]).to match(/password updated/i)
+      end
+
+      it "redirects to the todo_lists page" do
+        patch :update, id: user.password_reset_token, user: { password: 'new1234', password_confirmation: 'new1234' }
+        expect(response).to redirect_to(todo_lists_path)
+      end
+    end
+  end
+
 end
